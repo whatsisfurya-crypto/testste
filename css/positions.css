@@ -1,0 +1,213 @@
+.departments-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.department-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.dept-header {
+    padding: 20px 24px;
+    background: var(--bg-sidebar);
+}
+
+.dept-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dept-header p {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.dept-positions {
+    padding: 20px 24px;
+}
+
+.position-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.position-row:last-child {
+    border-bottom: none;
+}
+
+.position-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.position-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.level-bonus {
+    display: block;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.position-assigned {
+    display: flex;
+    align-items: center;
+}
+
+.assigned-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.assigned-user img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.assigned-user span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.assign-btn {
+    padding: 8px 16px;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    padding: 6px 12px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 6px;
+    color: #ef4444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.remove-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+.alert {
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.alert-error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-input);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.save-btn:hover {
+    background: var(--primary-dark);
+}

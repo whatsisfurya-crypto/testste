@@ -1,0 +1,191 @@
+/* Логи сервера */
+.logs-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.logs-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.logs-sidebar h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.log-files-list {
+    list-style: none;
+}
+
+.log-files-list li {
+    margin-bottom: 4px;
+}
+
+.log-files-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: var(--text2);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.log-files-list a:hover {
+    background: rgba(139,92,246,0.08);
+    color: var(--text);
+}
+
+.log-files-list li.active a {
+    background: rgba(139,92,246,0.15);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.file-size {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--text2);
+}
+
+.logs-viewer {
+    flex: 1;
+    min-width: 0;
+}
+
+.logs-toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.log-search input {
+    padding: 10px 16px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.log-search input:focus {
+    border-color: var(--primary);
+}
+
+.log-filters {
+    display: flex;
+    gap: 6px;
+}
+
+.filter-btn {
+    padding: 8px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--text);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.logs-content {
+    background: #050510;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.8;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.log-line {
+    display: flex;
+    gap: 12px;
+}
+
+.log-line .line-number {
+    color: var(--text2);
+    min-width: 40px;
+    text-align: right;
+    user-select: none;
+}
+
+.log-line .line-content {
+    word-break: break-all;
+}
+
+.log-line.log-error .line-content {
+    color: var(--red);
+}
+
+.log-line.log-warning .line-content {
+    color: var(--yellow);
+}
+
+.log-line.log-info .line-content {
+    color: var(--text);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.pagination .page-link {
+    padding: 8px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.pagination .page-link:hover {
+    border-color: var(--primary);
+    color: var(--text);
+}
+
+.pagination .page-link.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .logs-layout {
+        flex-direction: column;
+    }
+    .logs-sidebar {
+        width: 100%;
+    }
+}

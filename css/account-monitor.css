@@ -1,0 +1,208 @@
+/* Мониторинг аккаунтов */
+.search-section {
+    margin-bottom: 32px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 14px 18px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-form input:focus {
+    border-color: var(--primary);
+}
+
+.search-form button {
+    padding: 14px 28px;
+    background: var(--primary);
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-form button:hover {
+    background: #7c3aed;
+}
+
+/* Карточка безопасности */
+.security-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.security-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.security-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.risk-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.risk-low {
+    background: rgba(16,185,129,0.1);
+    color: var(--green);
+    border: 1px solid rgba(16,185,129,0.3);
+}
+
+.risk-medium {
+    background: rgba(245,158,11,0.1);
+    color: var(--yellow);
+    border: 1px solid rgba(245,158,11,0.3);
+}
+
+.risk-high {
+    background: rgba(239,68,68,0.1);
+    color: var(--red);
+    border: 1px solid rgba(239,68,68,0.3);
+}
+
+.risk-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.risk-low .risk-dot { background: var(--green); }
+.risk-medium .risk-dot { background: var(--yellow); }
+.risk-high .risk-dot { background: var(--red); }
+
+/* Статистика безопасности */
+.security-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.security-stat {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.security-stat .value {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.security-stat .value.warning {
+    color: var(--yellow);
+}
+
+.security-stat .value.danger {
+    color: var(--red);
+}
+
+.security-stat .label {
+    font-size: 11px;
+    color: var(--text2);
+    margin-top: 4px;
+}
+
+/* Связанные аккаунты */
+.linked-accounts h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.linked-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.linked-item .user {
+    flex: 1;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.linked-item .link-type {
+    font-size: 11px;
+    color: var(--text2);
+    padding: 4px 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+}
+
+.confidence-bar {
+    width: 120px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--primary);
+}
+
+.investigate-btn {
+    padding: 6px 14px;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.investigate-btn:hover {
+    background: #7c3aed;
+}
+
+@media (max-width: 700px) {
+    .security-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
